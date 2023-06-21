@@ -2,6 +2,8 @@ package xyl.me.service;
 
 import xyl.me.domain.User;
 
+import java.util.Map;
+
 public interface UserService {
-    void registerUser(User user);
+    Map registerUser(User user);
 }

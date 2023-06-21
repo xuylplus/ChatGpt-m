@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import xyl.me.domain.User;
 import xyl.me.service.UserService;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -20,10 +22,8 @@ public class UserController {
      * @return
      */
     @PostMapping("/register")
-    public Object registerUser(@RequestBody User user) {
-        userService.registerUser(user);
-
-        return null;
+    public Map registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
     }
 
 }
