@@ -34,7 +34,9 @@ public class UserServiceImpl implements UserService {
 
         User service = userMapper.selectOne(lqw);
         if (service != null) {
-            throw new HAException(null, ApiCode.ERR_SYSTEM, "该用户已存在");
+            //throw new HAException(null, ApiCode.ERR_SYSTEM, "该用户已存在");
+            //返回错误信息
+            return MapResponseUtil.createMapResponse(ApiCode.ERR_SYSTEM, null, "该用户已存在");
         }
 
         // 对密码进行加密

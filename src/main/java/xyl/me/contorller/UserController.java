@@ -8,7 +8,7 @@ import xyl.me.service.UserService;
 
 import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
@@ -23,7 +23,10 @@ public class UserController {
      */
     @PostMapping("/register")
     public Map registerUser(@RequestBody User user) {
-        return userService.registerUser(user);
+        Map map = userService.registerUser(user);
+        //输出map
+        System.out.println(map);
+        return map;
     }
 
 }

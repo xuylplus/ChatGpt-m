@@ -31,10 +31,6 @@ public class MapResponseUtil {
         return result;
     }
 
-    /**
-     * taskSourceId : 1 对应资源不存在
-     */
-
 
     /**
      * 默认成功返回
