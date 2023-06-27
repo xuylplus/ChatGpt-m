@@ -29,4 +29,25 @@ public class UserController {
         return map;
     }
 
+
+    /**
+     * 用户登录
+     * @param user
+     * @return
+     */
+    @PostMapping("/login")
+    public Map login(@RequestBody User user) {
+        Map map = userService.login(user);
+        //输出map
+        System.out.println(map);
+        return map;
+    }
+
+
+
+
+
+
+
+
 }
