@@ -13,7 +13,7 @@ import java.util.Map;
 public class BaiDuUtil {
 
     @SneakyThrows
-    public void registerUser(String address) {
+    public static String getAddress(String address) {
         String ak = "v3qcGGb2FISqR8y34St4GGdcAQci79t0"; // AK
         String addr = address; // 地址
         // 构建请求参数
@@ -61,9 +61,8 @@ public class BaiDuUtil {
             String province = jsonObjectAdds.getJSONObject("result").getJSONObject("addressComponent")
                     .getString("province");// 省
             String city = jsonObjectAdds.getJSONObject("result").getJSONObject("addressComponent").getString("city");// 市
-
-            System.out.println("province:" + province);
-            System.out.println("city:" + city);
+            return province + city;
         }
+        return null;
     }
 }
