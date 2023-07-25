@@ -6,4 +6,6 @@ import java.util.Map;
 
 public interface UserService {
     Map registerUser(User user);
+
+    Map login(User user);
 }

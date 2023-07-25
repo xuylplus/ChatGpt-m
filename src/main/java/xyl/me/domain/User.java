@@ -51,6 +51,16 @@ public class User {
     @Value("now()")
     private Date createTime;
 
+    /**
+     * 密码错误尝试次数
+     */
+    private Integer incorrectPasswordAttempts;
+
+    /**
+     * 是否禁用 (0.禁用 1.启用)
+     */
+    private Integer accountLocked;
+
 
 
 
