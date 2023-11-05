@@ -36,7 +36,6 @@ public class BaiDuUtil {
 
 
         //转换为map
-
         Map<String, String> map = JSONUtil.toBean(substring, new TypeReference<Map<String, String>>() {
         }, true);
 

@@ -44,6 +44,19 @@ public class UserController {
     }
 
 
+    /**
+     * 用户登录
+     * @param user
+     * @return
+     */
+    @PostMapping("/test")
+    public Map test(@RequestBody User user) {
+        Map map = userService.login(user);
+        //输出map
+        System.out.println(map);
+        return map;
+    }
+
 
 
 
