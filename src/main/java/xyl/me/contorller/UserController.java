@@ -24,6 +24,13 @@ public class UserController {
     @PostMapping("/register")
     public Map registerUser(@RequestBody User user) {
         Map map = userService.registerUser(user);
+
+        System.out.println("wwaw ");
+        System.out.println("wwaw ");
+        System.out.println("wwaw ");
+        System.out.println("wwaw ");
+        System.out.println("wwaw ");
+        System.out.println("wwaw ");
         //输出map
         System.out.println(map);
         return map;
