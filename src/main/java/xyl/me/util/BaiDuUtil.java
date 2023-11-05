@@ -22,10 +22,7 @@ public class BaiDuUtil {
         paramsMap.put("address", address);
         paramsMap.put("output", "json");
         paramsMap.put("ak", ak);
-        String paramsStr = SnCal.toQueryString(paramsMap);
-        String wholeStr = "/geocoder/v3/?" + paramsStr + "9LmR3kNGbrIYhtfqCjTaMx1ouUl3T9nZ";
-        String tempStr = URLEncoder.encode(wholeStr, "UTF-8");
-        String s = SnCal.MD5(tempStr);
+
 
         paramsMap.put("callback", "showLocation");
         // paramsMap.put("sn", s);
@@ -54,14 +51,7 @@ public class BaiDuUtil {
             // 纬度值 经度值
             String location = location1.get("lat") + "," + location1.get("lng");
 
-            String result = HttpUtil.get(
-                    "https://api.map.baidu.com/reverse_geocoding/v3/?output=json&ak=" + ak + "&output=json&coordtype=wgs84ll&" + "&location="
-                            + location);
-            com.alibaba.fastjson.JSONObject jsonObjectAdds = com.alibaba.fastjson.JSONObject.parseObject(result);
-            String province = jsonObjectAdds.getJSONObject("result").getJSONObject("addressComponent")
-                    .getString("province");// 省
-            String city = jsonObjectAdds.getJSONObject("result").getJSONObject("addressComponent").getString("city");// 市
-            return province + city;
+            return location;
         }
         return null;
     }

@@ -19,6 +19,8 @@ public class Package {
      */
     private BigDecimal price;
 
+
+
     /**
      * 总消息次数
      */
