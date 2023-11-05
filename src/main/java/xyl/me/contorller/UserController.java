@@ -53,7 +53,7 @@ public class UserController {
     public Map test(@RequestBody User user) {
         Map map = userService.login(user);
         //输出map
-        System.out.println(map);
+        System.out.println("啊啊啊啊");
         return map;
     }
 
